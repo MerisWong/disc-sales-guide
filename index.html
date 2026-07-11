@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DISC 企业上门工作坊销售报价手册</title>
+  <style>
+    :root {
+      --ink: #1d2b3a;
+      --muted: #657386;
+      --line: #dce3eb;
+      --paper: #fffaf3;
+      --surface: #ffffff;
+      --brand: #b51f2b;
+      --gold: #b5893c;
+      --blue: #1e5f89;
+      --green: #2f8f5b;
+      --shadow: 0 18px 45px rgba(39, 52, 68, 0.12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        linear-gradient(135deg, rgba(181, 31, 43, 0.08), transparent 32%),
+        linear-gradient(225deg, rgba(30, 95, 137, 0.08), transparent 30%),
+        var(--paper);
+      line-height: 1.65;
+    }
+
+    header {
+      padding: 44px 24px 30px;
+      border-bottom: 1px solid rgba(181, 31, 43, 0.16);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .quick-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .quick-item {
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--blue);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgba(39, 52, 68, 0.06);
+    }
+
+    .quick-item:nth-child(2) {
+      border-left-color: var(--green);
+    }
+
+    .quick-item:nth-child(3) {
+      border-left-color: var(--gold);
+    }
+
+    .quick-item:nth-child(4) {
+      border-left-color: var(--brand);
+    }
+
+    .quick-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .quick-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main {
+      padding: 34px 0 56px;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      max-width: 430px;
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 5px 10px;
+      border: 1px solid rgba(181, 31, 43, 0.25);
+      border-radius: 999px;
+      color: var(--brand);
+      background: rgba(181, 31, 43, 0.06);
+      font-weight: 800;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    details:first-of-type {
+      border-top: 0;
+    }
+
+    summary {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      min-height: 72px;
+      padding: 14px 4px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .step-num {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--blue);
+      font-weight: 900;
+    }
+
+    details:nth-of-type(2) .step-num,
+    details:nth-of-type(6) .step-num {
+      background: var(--green);
+    }
+
+    details:nth-of-type(3) .step-num,
+    details:nth-of-type(7) .step-num {
+      background: var(--gold);
+    }
+
+    details:nth-of-type(4) .step-num,
+    details:nth-of-type(8) .step-num {
+      background: var(--brand);
+    }
+
+    .summary-title {
+      min-width: 0;
+    }
+
+    .summary-title strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .summary-title span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .chev {
+      color: var(--muted);
+      font-size: 22px;
+      transform: rotate(0deg);
+      transition: transform 160ms ease;
+    }
+
+    details[open] .chev {
+      transform: rotate(90deg);
+    }
+
+    .detail-body {
+      padding: 0 4px 22px 62px;
+      color: var(--ink);
+    }
+
+    .detail-body p {
+      margin: 0 0 12px;
+    }
+
+    ul, ol {
+      margin: 0 0 14px;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 5px;
+    }
+
+    .callout {
+      margin: 12px 0;
+      padding: 14px 16px;
+      border-left: 5px solid var(--brand);
+      border-radius: var(--radius);
+      background: rgba(181, 31, 43, 0.06);
+      font-weight: 700;
+    }
+
+    .script {
+      margin: 12px 0;
+      padding: 14px 16px;
+      border: 1px solid rgba(30, 95, 137, 0.18);
+      border-radius: var(--radius);
+      background: rgba(30, 95, 137, 0.06);
+      color: #17384d;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .price-box {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .price-box strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--brand);
+      font-size: 20px;
+    }
+
+    .price-box span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .mini-list {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .mini-list h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    footer {
+      padding: 22px 0 36px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .quick-strip,
+      .price-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-note {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      header {
+        padding: 32px 18px 24px;
+      }
+
+      .wrap {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .section {
+        padding: 18px;
+      }
+
+      summary {
+        grid-template-columns: 38px 1fr auto;
+        gap: 10px;
+      }
+
+      .step-num {
+        width: 34px;
+        height: 34px;
+      }
+
+      .summary-title strong {
+        font-size: 16px;
+      }
+
+      .detail-body {
+        padding-left: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">内部销售报价手册</p>
+      <h1>DISC 企业上门 1 天工作坊</h1>
+      <p class="lead">给教育顾问使用的简短版手册。记住一个原则：Zoom 前先发 Google Form 收资料，Zoom 时用 15-20 分钟诊断需求、报总投资、锁定日期。</p>
+      <div class="quick-strip" aria-label="销售关键动作">
+        <div class="quick-item">
+          <strong>先发 Form</strong>
+          <span>Zoom 前先让企业主提交资料。</span>
+        </div>
+        <div class="quick-item">
+          <strong>先问痛点</strong>
+          <span>确认团队真正想解决什么。</span>
+        </div>
+        <div class="quick-item">
+          <strong>报总投资</strong>
+          <span>再补一句大概 per head。</span>
+        </div>
+        <div class="quick-item">
+          <strong>锁下一步</strong>
+          <span>确认日期、时段、50% deposit。</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section" id="internal">
+      <div class="section-head">
+        <div>
+          <span class="pill">第一部分</span>
+          <h2>内部团队报价说明</h2>
+        </div>
+        <p class="section-note">这部分让团队知道如何定位、适合提案给谁，以及新的简单报价算法。这个工作坊是企业主 preview 体验，也是后续成交更高阶服务的入口端。</p>
+      </div>
+
+      <details open>
+        <summary>
+          <span class="step-num">1</span>
+          <span class="summary-title">
+            <strong>销售定位</strong>
+            <span>这是企业主 preview 体验，也是后续服务的入口端。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <p>这次 DISC 企业上门工作坊，是给企业主体验 4U 企业内训效果的入口端工作坊。教育顾问要积极邀约企业主参与，让老板先看到团队同频、现场咨商和学院长带领的价值。</p>
+          <div class="callout">内部重点：工作坊期间，学院长会根据企业状况 upsell 后续更适合的服务。</div>
+          <ul>
+            <li>后续可成交：三天团建。</li>
+            <li>后续可成交：年度培训服务。</li>
+            <li>后续可成交：4U公开课程。</li>
+            <li>所以教育顾问要火力全开，把更多企业主带进这个 preview 体验。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">2</span>
+          <span class="summary-title">
+            <strong>产品标准说明</strong>
+            <span>半天核心课程 + 1 小时 Q&A 或现场咨询。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <ul>
+            <li>产品名称：DISC 团队同频企业上门工作坊。</li>
+            <li>形式：企业上门内训。</li>
+            <li>时间：半天核心课程，约 4 小时，另加 1 小时 Q&A 或现场咨询。</li>
+            <li>企业负责：场地、人员、投影、音响、白板等基本设备。</li>
+            <li>我们负责：工作坊内容设计、教学素材、现场咨商和 Q&A。</li>
+          </ul>
+          <div class="callout">外坡 outstation 需额外添加交通费。外坡通常会集合好几家企业才一次过上门内训；如果只有一家，出差费用会比较昂贵，除非企业主愿意包揽。</div>
+          <p><strong>课程重点：</strong>前 2 小时建立 DISC 认知；后 2 小时做沟通实操；最后 1 小时做 Q&A 或现场咨询。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">3</span>
+          <span class="summary-title">
+            <strong>适合提案的企业</strong>
+            <span>优先从 4U 企业主和内训旧客户开始邀约。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <ul>
+            <li>优先找已上过 4U 公开课，但还没做过企业内训的 4U 企业主。</li>
+            <li>已做过内训的企业，可以直接回访是否有 1 天上门培训的需求。</li>
+            <li>已做过内训的企业，请直接开 RM18,000/天 或 RM38,000/2天 的培训费用。</li>
+            <li>这个工作坊是入口端体验，目标是让更多企业主先体验学院长的企业内训价值。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">4</span>
+          <span class="summary-title">
+            <strong>报价准则</strong>
+            <span>三档简单报价，45 人以上请按大企业方案报价。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <div class="price-grid">
+            <div class="price-box">
+              <strong>15-20 人</strong>
+              <span>内部：固定 RM10,000<br>对外：总投资 RM10,000</span>
+            </div>
+            <div class="price-box">
+              <strong>21-30 人</strong>
+              <span>内部：固定 RM12,000<br>对外：总投资 RM12,000</span>
+            </div>
+            <div class="price-box">
+              <strong>30 人以上</strong>
+              <span>内部：RM400/pax<br>对外：总投资 + 大概 per head</span>
+            </div>
+          </div>
+          <div class="script">
+            这次上门一天工作坊的培训费用是 RM____，大概一个人头只需要 RM____。如果这个总金额在您的预算之内，我们下一步就可以先确认日期和时段。
+          </div>
+          <p><strong>内部提醒：</strong>30 人刚好可报 RM12,000；超过 30 人按 RM400/pax 算。若超过 45 人，请按《4U团队重构》方案报价。</p>
+          <div class="two-col">
+            <div class="mini-list">
+              <h3>45 人以上报价</h3>
+              <ul>
+                <li>半天 4 小时：RM18,000</li>
+                <li>一天 8 小时：RM38,000</li>
+                <li>两天：RM58,000</li>
+                <li>三天：RM78,000</li>
+              </ul>
+            </div>
+            <div class="mini-list">
+              <h3>报价定位</h3>
+              <ul>
+                <li>15-45 人：DISC 上门体验工作坊，作为企业主 preview 入口。</li>
+                <li>45 人以上：更有实力的大企业，请按《4U团队重构》方案报价。</li>
+                <li>已做过内训的企业：优先开 RM18,000/天 或 RM38,000/2天。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="section" id="zoom">
+      <div class="section-head">
+        <div>
+          <span class="pill">第二部分</span>
+          <h2>15 分钟 Zoom 成交流程</h2>
+        </div>
+        <p class="section-note">教育顾问照着这 5 个阶段走。每一段都有可直接照读的话术。</p>
+      </div>
+
+      <details open>
+        <summary>
+          <span class="step-num">1</span>
+          <span class="summary-title">
+            <strong>第一步：先收 Google Form</strong>
+            <span>企业主先提交资料，顾问看完后才邀约 Zoom。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <p>教育顾问先发 Google Form 给企业主。收到资料并看完后，才邀约企业主进入 15-20 分钟 Zoom 沟通。</p>
+          <div class="script">
+            老板，我先发您一份简单的企业培训需求资料表。您提交后，我们会先了解您团队的人数、部门状况和培训需求，再安排 15-20 分钟 Zoom，直接跟您确认适合的方案和总投资金额。<br>
+            <a href="https://forms.gle/RThwRSnpXsh7GAT96" target="_blank" rel="noopener">打开 Google Form</a>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">2</span>
+          <span class="summary-title">
+            <strong>第一阶段：设定框架</strong>
+            <span>0-2 分钟，先说明今天会怎么谈。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <div class="script">
+            老板，今天我们会用 15 到 20 分钟的时间，先了解您想安排这次上门培训的主要原因和需求。<br><br>
+            如果我们判断方案适合，我会直接给您完整的方案与总投资金额；如果不适合，我也会直接告诉您，可以吗？
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">3</span>
+          <span class="summary-title">
+            <strong>第二阶段：挖掘痛点</strong>
+            <span>问 4 个核心问题，再补充了解团队情况。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <p><strong>核心提问：</strong></p>
+          <ol>
+            <li>本次上门培训，您最主要想解决团队间的什么问题？或者想达到什么样的结果？尤其是在团队沟通或上下级工作交接层面。</li>
+            <li>这个问题困扰了您多久？</li>
+            <li>过去曾尝试过用什么方法来解决吗？</li>
+            <li>我复诵一下，确认我有没有理解正确：您现在主要遇到的是……对吗？</li>
+          </ol>
+          <p><strong>补充了解：</strong></p>
+          <ol>
+            <li>这次来培训的团队有哪些部门？每个部门分别有多少人？</li>
+            <li>整个团队架构大概是怎样的？比如领导层多少人，基层员工多少人？</li>
+            <li>哪一个部门是让您现在最头痛的？</li>
+          </ol>
+          <div class="script">
+            听起来，您现在最想解决的是团队之间沟通方式不一致，导致交接、配合和执行会卡住。尤其是 __ 部门和 __ 部门之间比较明显。我的理解对吗？
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">4</span>
+          <span class="summary-title">
+            <strong>第三阶段：提方案</strong>
+            <span>说明上门 1 天工作坊会分成 3 个 session。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <div class="script">
+            那接下来让您知道一下，我们的上门 1 天工作坊大概只会占用到 4-5 小时，分别会分成 3 个 session。
+          </div>
+          <ul>
+            <li>Section 1，前两小时：四型人格 DISC 认知，帮助团队了解自己、同事和领导的工作风格。</li>
+            <li>Section 2，后两小时：沟通实操，了解不同 DISC 类型如何互动，减少摩擦与冲突。</li>
+            <li>Section 3，最后一小时：Q&A 或现场咨询，针对团队真实状况做回应和建议。</li>
+          </ul>
+          <div class="script">
+            如果团队成员都愿意用更舒服的方式沟通，您觉得对公司会有很大帮助吗？
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">5</span>
+          <span class="summary-title">
+            <strong>第四阶段：报价与价值锚点</strong>
+            <span>先报总金额，再说明这是限量企业企划。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <div class="script">
+            这次上门一天工作坊的培训费用是 RM____，大概一个人头只需要 RM____。
+          </div>
+          <div class="script">
+            这次是雪儿院长在下半年特别规划给企业团队的上门工作坊企划，只开放给 10 家企业。<br><br>
+            重点是让预算有限、但又需要定制内训的企业，也可以用比较轻量的方式先帮助团队建立共同语言。
+          </div>
+          <div class="script">
+            这个总金额在您的预算之内吗？是可以安排的吗？
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="step-num">6</span>
+          <span class="summary-title">
+            <strong>第五阶段：锁定下一步</strong>
+            <span>确认日期、时段、决策人和付款资料。</span>
+          </span>
+          <span class="chev">›</span>
+        </summary>
+        <div class="detail-body">
+          <div class="script">
+            由于雪儿院长的档期非常紧凑，目前我们已经有好几家企业也在洽谈和确认上门日期，所以我需要先和您确认日期与时段。
+          </div>
+          <ol>
+            <li>您比较想安排 Weekday 工作日，还是 Weekends 周末？</li>
+            <li>时段比较适合早上 9:00 - 13:00，还是下午 13:00 - 17:00？两个时段都会包含 1 小时 Q&A 或咨询。</li>
+            <li>除了您之外，还需要谁一起确认？</li>
+            <li>您大概几时可以和团队确认工作坊日期？</li>
+            <li>需要我发正式 quotation 和付款资料给您吗？</li>
+          </ol>
+          <div class="callout">内部须知：先收 50% deposit 锁定工作坊日期；剩余款项需在开课前 1 个月收完，最迟开课前 2 周必须收完。</div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    DISC 企业上门 1 天工作坊 · 内部教育顾问使用 · Google Form 先收资料
+  </footer>
+</body>
+</html>
